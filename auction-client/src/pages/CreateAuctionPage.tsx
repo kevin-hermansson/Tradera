@@ -10,14 +10,16 @@ const CreateAuctionPage = () => {
     const [startDate, setStartDate] = useState("")
     const [endDate, setEndDate] = useState("")
     const handleCreate = async () => {
-
+        
+        const storedUser = localStorage.getItem("user")
+        const userId = storedUser ? JSON.parse(storedUser).id : null
         const auction = {
             title,
             description,
             startPrice,
             startDate,
             endDate,
-            userId: 1
+            userId
         }
         await createAuction(auction)
         navigate("/")

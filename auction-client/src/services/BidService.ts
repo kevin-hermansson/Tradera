@@ -1,4 +1,4 @@
-export const placeBid = async (auctionId: number, amount: number,) => {
+export const placeBid = async (auctionId: number, amount: number, userId: number) => {
     const url = "https://localhost:7103/api/bid"
     return await fetch(url, {
         method: "POST",
@@ -8,7 +8,7 @@ export const placeBid = async (auctionId: number, amount: number,) => {
         body: JSON.stringify({
             auctionId,
             amount,
-            userId: 2
+            userId
         })
     }).then(res => res.json())
 }
