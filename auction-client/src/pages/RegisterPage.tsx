@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { registerUser } from "../services/UserService"
+import BackButton from "../components/BackButton/BackButton"
 
 const RegisterPage = () => {
 
@@ -41,6 +42,7 @@ const RegisterPage = () => {
       />
 
       <button onClick={handleRegister}>Register</button>
+      <BackButton />
     </div>
   )
 }

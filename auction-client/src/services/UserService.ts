@@ -19,7 +19,7 @@ export const loginUser = async (email: string, password: string) => {
 
   const url = "https://localhost:7103/api/users/login"
 
-  return await fetch(url, {
+  const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -28,5 +28,9 @@ export const loginUser = async (email: string, password: string) => {
       email,
       password
     })
-  }).then(res => res.json())
+  })
+
+  if (!response.ok) return null
+
+  return await response.json()
 }

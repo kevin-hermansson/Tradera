@@ -7,4 +7,5 @@ export interface Auction {
   startDate: string;
   endDate: string;
   userId: number;
+  
 }

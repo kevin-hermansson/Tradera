@@ -22,3 +22,11 @@ export const createAuction = async (auction: any) => {
         body: JSON.stringify(auction)
     }).then(res => res.json())
 }
+export const deleteAuction = async (auctionId: number, userId: number) => {
+
+  const url = `https://localhost:7103/api/auction/${auctionId}/${userId}`
+
+  return await fetch(url, {
+    method: "DELETE"
+  })
+}

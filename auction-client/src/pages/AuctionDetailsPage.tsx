@@ -6,6 +6,8 @@ import AuctionInfo from "../components/AuctionInfo/AuctionInfo"
 import BidSection from "../components/BidSection/BidSection"
 import BidHistory from "../components/BidHistory/BidHistory"
 import BackButton from "../components/BackButton/BackButton"
+import DeleteAuctionButton from "../components/DeleteAuctionButton/DeleteAuctionButton"
+
 
 
 
@@ -31,6 +33,8 @@ const AuctionDetailsPage = () => {
   return (
     <div>
       <BackButton />
+
+      <DeleteAuctionButton auctionId={auction.id} ownerId={auction.userId} currentUserId={currentUserId} />
 
       <AuctionInfo auction={auction} />
 

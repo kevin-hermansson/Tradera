@@ -1,6 +1,7 @@
 import {useState} from "react";
 import { createAuction } from "../services/AuctionService";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../components/BackButton/BackButton";
 
 const CreateAuctionPage = () => {
     const navigate = useNavigate()
@@ -28,6 +29,7 @@ const CreateAuctionPage = () => {
     return (
         <div>
             <h1>Create Auction</h1>
+            
 
             <input
                 type="text"
@@ -60,6 +62,7 @@ const CreateAuctionPage = () => {
                 onChange={(e) => setEndDate(e.target.value)}
             />
             <button onClick={handleCreate}>Create</button>
+            <BackButton />
         </div>
     )
 }
