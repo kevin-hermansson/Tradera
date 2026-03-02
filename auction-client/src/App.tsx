@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import {  Routes, Route, useLocation } from "react-router-dom"
 
 import { getOpenAuctions } from "./services/AuctionService"
 import type { Auction } from "./types/Types"
